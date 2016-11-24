@@ -17,7 +17,7 @@ class sPlayerSize extends PluginBase implements Listener {
 
 	public function onEnable() {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-		 if(!is_dir($this->getDataFolder())) @mkdir($this->getDataFolder());
+		if(!is_dir($this->getDataFolder())) @mkdir($this->getDataFolder());
         $this->saveResource("config.yaml");
         $this->getLogger()->info("§2▪ §fПлагин включен!");
         $this->config = (new Config($this->getDataFolder() . "config.yaml"))->getAll();
